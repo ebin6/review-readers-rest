@@ -109,9 +109,9 @@ export function ContactSection() {
                 required
                 className="bg-card resize-none"
               />
-              <Button type="submit" className="w-full gradient-bg hover:opacity-90">
+              <Button type="submit" disabled={submitting} className="w-full gradient-bg hover:opacity-90">
                 <Send className="h-4 w-4 mr-2" />
-                Send Message
+                {submitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>
